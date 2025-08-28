@@ -15,16 +15,6 @@ const faqData = [
     answer:
       "Para manter o brilho da sua joia, evite o contato com produtos químicos, perfumes e água do mar. Guarde-a em local seco e limpe-a com uma flanela macia.",
   },
-  {
-    question: "Qual o prazo de entrega?",
-    answer:
-      "O prazo de entrega varia de acordo com a sua localidade. Após a confirmação do pagamento, preparamos seu pedido e informamos o código de rastreio.",
-  },
-  {
-    question: "A loja física existe?",
-    answer:
-      "No momento, a Bella Prata é uma loja exclusivamente online, com atendimento personalizado através do WhatsApp e Instagram para todo o Brasil.",
-  },
 ];
 
 export function Faq() {

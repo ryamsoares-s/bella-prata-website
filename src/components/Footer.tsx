@@ -12,7 +12,7 @@ export function Footer() {
                 <a href="#duvidas">Dúvidas Frequentes</a>
               </li>
               <li>
-                <a href="#contato">Fale Conosco</a>
+                <a href="#">Fale Conosco</a>
               </li>
             </ul>
           </div>
