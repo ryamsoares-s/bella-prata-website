@@ -1,0 +1,396 @@
+/* === 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS DE COR === */
+:root {
+  --cor-principal: #3a3a3a;
+  --cor-secundaria: #c57b9a;
+  --cor-fundo: #ffffff;
+  --cor-fundo-claro: #fcf8f9;
+  --cor-texto: #3a3a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-montserrat), sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-cormorant), serif;
+} /* Fonte de títulos */
+
+/* === 2. HEADER === */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo a {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: none;
+} /* Escondido em mobile, aparece em telas maiores */
+@media (min-width: 768px) {
+  .header-nav {
+    display: block;
+  }
+}
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.header-nav a {
+  text-decoration: none;
+  color: var(--cor-texto);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--cor-principal);
+}
+
+/* === 3. INFO BAR === */
+.info-bar {
+  padding: 40px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.info-bar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .info-bar-content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+}
+.info-item svg {
+  margin-bottom: 15px;
+  color: var(--cor-principal);
+}
+.info-item h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.info-item p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* === 4. SEÇÃO ESSÊNCIA === */
+.essence-section {
+  background-color: var(--cor-fundo-claro);
+  padding: 60px 20px;
+  text-align: center;
+}
+.essence-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.essence-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .essence-content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+.essence-item {
+  max-width: 300px;
+}
+.essence-item svg {
+  color: var(--cor-secundaria);
+  margin-bottom: 15px;
+}
+.essence-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.essence-item p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* === 5. SEÇÃO INSTAGRAM === */
+.instagram-section {
+  padding: 80px 0;
+}
+.instagram-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.instagram-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.follow-btn {
+  background-color: var(--cor-secundaria);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.follow-btn:hover {
+  transform: scale(1.05);
+}
+.instagram-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.instagram-post {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+}
+.instagram-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.instagram-post:hover img {
+  transform: scale(1.1);
+}
+
+/* === 6. FOOTER === */
+.main-footer {
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto);
+  padding: 60px 0 20px 0;
+  margin-top: 80px;
+  border-top: 1px solid #eaeaea;
+}
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media (min-width: 640px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .footer-columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.footer-column h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.footer-column ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-column a,
+.footer-column p {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+}
+.footer-column a:hover {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-icons a {
+  color: var(--cor-principal);
+}
+.social-icons a:hover {
+  color: var(--cor-secundaria);
+}
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* === 7. WHATSAPP BUTTON === */
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+/* === 8. ESTILOS GERAIS PARA SEÇÕES === */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+/* === 9. SEÇÃO FAQ === */
+.faq-section {
+  padding: 80px 0;
+  background-color: var(--cor-fundo-claro);
+}
+.accordion {
+  max-width: 700px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.accordion-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+.accordion-answer.open {
+  max-height: 200px; /* Altura suficiente para a resposta */
+}
+.accordion-answer p {
+  padding: 0 20px 20px 20px;
+  line-height: 1.6;
+  color: #555;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* === 10. SEÇÃO CONTATO === */
+.contact-section {
+  padding: 80px 0;
+}
+.contact-channels {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+.contact-card {
+  background-color: var(--cor-fundo-claro);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--cor-texto);
+  flex-basis: 280px; /* Largura base de cada card */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.contact-card svg {
+  color: var(--cor-secundaria);
+  margin-bottom: 15px;
+}
+.contact-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+.contact-card p {
+  color: #555;
+}
+
+/* === NAVEGAÇÃO SUAVE === */
+html {
+  scroll-behavior: smooth;
+}
